@@ -1,0 +1,4 @@
+FROM tomcat:8.0
+apt update
+apt install -y mc
+EXPOSE 8080
