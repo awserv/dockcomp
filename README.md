@@ -1,1 +1,2 @@
-# dockcomp
+docker Prod
+docker build
