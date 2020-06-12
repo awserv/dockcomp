@@ -1,0 +1,19 @@
+#v3.0
+
+version: '3.0'
+services:
+  # workdir: ./dock
+  work:
+     build: ./dock/work
+     volumes:
+      - data_volume:/usr/local/tomcat/webapps
+  prod:
+     image: tomcat
+     volumes:
+      - data_volume:/usr/local/tomcat/webapps
+     ports:
+      - "8080:8080"
+     restart: always
+   volumes:
+      data_volume:
+# docker-compose up -d
